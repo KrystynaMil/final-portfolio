@@ -112,9 +112,9 @@
              </div>
              <!-- social links start -->
              <div class="social-links fadeInUp">
-                <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/KrystynaMil" class="outer-shadow hover-in-shadow"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/krystyna-miliutyna/" class="outer-shadow hover-in-shadow"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/miliutyna/" class="outer-shadow hover-in-shadow"><i class="fab fa-facebook-f"></i></a>
              </div>
              <!-- social links end -->
           </div>
@@ -440,9 +440,9 @@
                          <h3>Project info</h3>
                          <ul>
                             <li>Date - <span>2021</span></li>
-                            <li>Github - <span><a href="#">https://github.com/KrystynaMil/HELPY</a></span></li>
+                            <li>Github <span><a href="#">https://github.com/KrystynaMil/HELPY</a></span></li>
                             <li>Tools - <span>MERN stack: React, Material-UI, Express, Node, Mongo.DB</span></li>
-                            <li>Web - <span><a href="#">helpy-hyf.herokuapp.com</a></span></li>
+                            <li>Web - <span><a href="#">https://helpy-hyf.herokuapp.com/</a></span></li>
                          </ul>
                        </div>
                     </div>
@@ -522,7 +522,7 @@
               <div class="portfolio-item-inner outer-shadow">
                  <div class="portfolio-item-img pulse">
                     <img src="img/portfolio/thumb/project-4.png" alt="portfolio" 
-                    data-screenshots="img/portfolio/large/project-4/1.png">
+                  >
                     <!-- view project btn -->
                     <span class="view-project">view project</span>
                  </div>
@@ -554,7 +554,7 @@
               <div class="portfolio-item-inner outer-shadow">
                  <div class="portfolio-item-img pulse">
                     <img src="img/portfolio/thumb/project-5.png" alt="portfolio" 
-                    data-screenshots="img/portfolio/large/project-5/1.png">
+                  >
                     <!-- view project btn -->
                     <span class="view-project">view project</span>
                  </div>
@@ -586,9 +586,7 @@
               <div class="portfolio-item-inner outer-shadow">
                  <div class="portfolio-item-img pulse">
                     <img src="img/portfolio/thumb/project-6.png" alt="portfolio" 
-                    data-screenshots="img/portfolio/large/project-6/1.png,
-                    img/portfolio/large/project-6/2.png,
-                    img/portfolio/large/project-6/3.png">
+                   >
                     <!-- view project btn -->
                     <span class="view-project">view project</span>
                  </div>
@@ -619,9 +617,7 @@
            <div class="portfolio-item" data-category="web-application">
               <div class="portfolio-item-inner outer-shadow">
                  <div class="portfolio-item-img pulse">
-                    <img src="img/portfolio/thumb/project-7.png" alt="portfolio" 
-                    data-screenshots="img/portfolio/large/project-7/1.png,
-                    img/portfolio/large/project-7/2.png">
+                    <img src="img/portfolio/thumb/project-7.png" alt="portfolio">
                     <!-- view project btn -->
                     <span class="view-project">view project</span>
                  </div>
@@ -652,9 +648,7 @@
            <div class="portfolio-item" data-category="mobile-app">
               <div class="portfolio-item-inner outer-shadow">
                  <div class="portfolio-item-img pulse">
-                    <img src="img/portfolio/thumb/project-8.png" alt="portfolio" 
-                    data-screenshots="img/portfolio/large/project-8/1.png,
-                    img/portfolio/large/project-8/2.png">
+                    <img src="img/portfolio/thumb/project-8.png" alt="portfolio" >
                     <!-- view project btn -->
                     <span class="view-project">view project</span>
                  </div>
@@ -666,9 +660,7 @@
            <div class="portfolio-item" data-category="mobile-app, web-design">
             <div class="portfolio-item-inner outer-shadow">
                <div class="portfolio-item-img pulse">
-                  <img src="img/portfolio/thumb/project-9.png" alt="portfolio" 
-                  data-screenshots="img/portfolio/large/project-8/1.png,
-                  img/portfolio/large/project-8/2.png">
+                  <img src="img/portfolio/thumb/project-9.png" alt="portfolio">
                   <!-- view project btn -->
                   <span class="view-project">view project</span>
                </div>
@@ -723,29 +715,24 @@
        </div>
        <div class="row">
          <div class="contact-form">
-            <form action="POST" data-netlify="true">
+            <form>
                   <div class="row">
                       <div class="w-50">
                          <div class="input-group outer-shadow hover-in-shadow fadeInRight">
-                           <input type="text" id ="name" placeholder="Name" class="input-control ">
+                           <input type="text" name="name" placeholder="Name" class="input-control" required>
+                         </div>
+                         <div class="input-group outer-shadow hover-in-shadow fadeInRight" required>
+                           <input type="email"  name="email" placeholder="Email" class="input-control">
                          </div>
                          <div class="input-group outer-shadow hover-in-shadow fadeInRight">
-                           <input type="text" id="email" placeholder="Email" class="input-control">
-                         </div>
-                         <div class="input-group outer-shadow hover-in-shadow fadeInRight">
-                           <input type="text" id="subject" placeholder="Subject" class="input-control">
+                           <input type="text" name="subject" placeholder="Subject" class="input-control" required>
                          </div>
                       </div>
                       <div class="w-50">
                          <div class="input-group outer-shadow hover-in-shadow fadeInRight">
-                            <textarea id="message" class="input-control" placeholder="Message"></textarea>
+                            <textarea  class="input-control" name="message" placeholder="Message" required></textarea>
                          </div>
-                         <div class="input-group fadeInRight" class="input-control">
-                              <input type="file" id="myfile"  placeholder="Upload File" />
-                        </div>
-
-                        <div class="input-group fadeInRight" class="input-control">
-                           <div data-netlify-recaptcha="true"></div>
+                         </div>
                      </div>
                   <div class="row">
                      <div class="submit-btn">
@@ -759,13 +746,10 @@
     
  </section>
  <!-- contact section end -->
-  <!-- footer star-->
- <footer class="copyright">
-   <div class="up" id="up">
-     <i class="fas fa-chevron-up"></i>
+  <!-- footer start-->
+  <footer class="copyright">
    </div>
    <p class="copyright-text">&copy; 2021 Krystyna Miliutyna</p>
- 
  </footer>
   <!-- footer end -->
  <!-- portfolio popup start -->
@@ -824,6 +808,10 @@
 <script src="js/main.js"></script>
 <!-- style switcher js -->
 <script src="js/style-switcher.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+</script>
 </body>
 </html>
 

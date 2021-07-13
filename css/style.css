@@ -1946,4 +1946,21 @@ contact section
 }
 
 
+/*Start footer*/
+.copyright {
+   width: 100%;
+   text-align: center;
+ 
+   padding: 2rem 0;
+   position: relative;
+}
+
+
+
+.copyright p {
+   font-size: 1.4rem;
+   color: var(--text-black-600);
+}
+/*End footer*/
+
 

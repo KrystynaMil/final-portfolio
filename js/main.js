@@ -249,55 +249,6 @@
    
 })();
 
-/*------------------- testimonial slider --------------------- 
-
-(() =>{
-  
-     const sliderContainer = document.querySelector(".testi-slider-container"),
-     slides = sliderContainer.querySelectorAll(".testi-item"),
-     slideWidth = sliderContainer.offsetWidth,
-     prevBtn = document.querySelector(".testi-slider-nav .prev"),
-     nextBtn = document.querySelector(".testi-slider-nav .next"),
-     activeSlide = sliderContainer.querySelector(".testi-item.active");
-     let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
-
-     // set width of all slides
-     slides.forEach((slide) =>{
-     	slide.style.width = slideWidth + "px";
-     })
-     // set width of sliderContainer 
-     sliderContainer.style.width = slideWidth * slides.length + "px";
-
-     nextBtn.addEventListener("click", () =>{
-     	if(slideIndex === slides.length-1){
-     		slideIndex = 0;
-     	}
-     	else{
-     		slideIndex++;
-     	}
-     	slider();
-     })
-
-     prevBtn.addEventListener("click", () =>{
-     	if(slideIndex === 0){
-     		slideIndex = slides.length-1;
-     	}
-     	else{
-     		slideIndex--;
-     	}
-     	slider();
-     })
-
-     function slider(){
-     	// deactivate existing active slide
-     	sliderContainer.querySelector(".testi-item.active").classList.remove("active");
-     	// activate new slide
-     	slides[slideIndex].classList.add("active");
-     	sliderContainer.style.marginLeft = - (slideWidth * slideIndex) + "px";
-     }
-     slider();
-
-})();
 
 /*----------- hide all sections except active --------------*/ 
 
@@ -321,37 +272,15 @@
  	},600)
  })
 
-/*----------- contact form --------------*/ 
-const contactForm = document.querySelector(".contact-form");
-let name = document.getElementById('name');
-let email= document.getElementById('email');
-let subject = document.getElementById('subject');
-let message = document.getElementById('message');
-
-contactForm.addEventListener('submit', (e)=>{
-	e.preventDefault();
-
-let formData = {
-	name: name.value,
-	email: email.value,
-	subject: subject.value,
-	message: message.value
-}
-
-let xhr = new XMLHttpRequest();
-xhr.open('POST', '/');
-xhr.setRequestHeader('content-type', 'application/json');
-xhr.onload = function(){
-	console.log(xhr.responseText);
-	if(xhr.responseText == 'success'){
-		alert('Email sent');
-		name.value = '';
-		email.value = '';
-		subject.value= '';
-		message.value= '';
-	}else{
-		alert('Something went wrong!')
-	}
-	xhr.send(JSON.stringify(formData));
-} 
+/*----------- contact form--------------*/ 
+const btn = document.querySelector('button')
+const inputs =document.querySelector('form')
+btn.addEventListener('click', () => {
+	Email.send({
+	    SecureToken: "9918aaba-fb43-4aae-9ed7-3b8a42b935c4",
+		To: "xyz@gm.com",
+		From: inputs.elements["email"].value,
+		Subject: inputs.elements["subject"].value,
+		Body: inputs.elements["message"].value + "<br>" + inputs.elements["name"].value 
+	})
 })
